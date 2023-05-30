@@ -3,9 +3,9 @@
     "version" : 2,
     "public" : true,
 
-    "build": [
+    "builds": [
         {
-            "src": "./src/server.ts",
+            "src": "src/server.ts",
             "use": "@vercel/node"
         }
     ],
