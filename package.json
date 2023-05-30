@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node" : "16.x" // Version Node Vercel
+    "node" : "16.x" 
   },
   "scripts": {
     "start": "tsx watch src/server.ts",
