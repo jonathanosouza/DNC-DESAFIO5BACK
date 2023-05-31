@@ -13,7 +13,7 @@
     "dev": "tsx watch src/server.ts",
     "knex": "node --trace-warnings --loader tsx ./node_modules/knex/bin/cli.js",
     "lint": "eslint src --ext .ts --fix",
-    "vercel-build" : "npx knex migrate:latest"
+    "vercel-build" : "npx knex migrate:up"
   }, 
   "keywords": [],
   "author": "",
