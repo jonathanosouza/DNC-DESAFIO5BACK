@@ -6,7 +6,7 @@
     "builds": [
         {
 
-            "src": "src/seraver.ts",
+            "src": "src/server.ts",
             "use": "@vercel/node"
         }
     ],
