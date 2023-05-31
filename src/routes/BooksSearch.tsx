@@ -1,7 +1,6 @@
 import { randomUUID } from "crypto";
 import { FastifyInstance } from "fastify";
 import { knex } from '../database'
-import { config as configKnex } from './src/database'
 import { z } from "zod";
 import { error } from "console";
 
