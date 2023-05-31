@@ -7,7 +7,7 @@ import fastifyCors from 'fastify-cors';
 export const app = fastify();
 
 // app.register(cookie);
-app.register(BooksSearchRoutes, { prefix: 'livros' });
+app.register(BooksSearchRoutes);
 app.get('/', async (req, reply) => {
     return 'Rota Get Accesada com Sucesso'
 });

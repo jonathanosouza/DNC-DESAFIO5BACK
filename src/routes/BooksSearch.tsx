@@ -6,7 +6,7 @@ import { error } from "console";
 
 export  async function BooksSearchRoutes(app: FastifyInstance) {
 
-    app.post('/', async (req, reply) => { 
+    app.post('/livros', async (req, reply) => { 
         const createBookSchema = z.object({
             title : z.string(),
             pagenumber: z.number(),
@@ -27,12 +27,12 @@ export  async function BooksSearchRoutes(app: FastifyInstance) {
     })
 
 
-    app.get('/' , async (req, reply) => {
+    app.get('/livros' , async (req, reply) => {
         const books = await knex('books').select('*')
         return {books}
     })
 
-    app.get('/:id' , async (req, reply) => {
+    app.get('/livros/:id' , async (req, reply) => {
         const getBooksParamsSchema = z.object({
             id: z.string().uuid(),
           })
@@ -46,12 +46,12 @@ export  async function BooksSearchRoutes(app: FastifyInstance) {
         }
     })
 
-    app.delete('/', async (req, reply) => {
+    app.delete('/livros', async (req, reply) => {
         await  knex('books').del()
         return reply.status(201).send('Livro Excluído com Sucesso')  
     })
 
-    app.delete('/:id', async (req, reply) => {
+    app.delete('/livros/:id', async (req, reply) => {
         const deleteBooksParamsSchema = z.object({
             id: z.string().uuid(),
           })
@@ -63,7 +63,7 @@ export  async function BooksSearchRoutes(app: FastifyInstance) {
 
 
 
-    app.put('/:id', async (req, reply) => {
+    app.put('/livros/:id', async (req, reply) => {
         const createBookSchema = z.object({
           title: z.string(),
           pagenumber: z.number(),
