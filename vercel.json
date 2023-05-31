@@ -11,9 +11,8 @@
         }
     ],
     "routes" : [
-        {
-            "src": "/(.*)",
-            "dest": "src/routes"
-        }
+        { "src": "/routes/BooksSearch.tsx", 
+        "dest": "/routes/BooksSearch.tsx" }
+
     ]
 }
