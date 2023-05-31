@@ -5,15 +5,16 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
     "knex": "node --trace-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "lint": "eslint src --ext .ts --fix"
-  },
+    "lint": "eslint src --ext .ts --fix",
+    "vercel-build" : "npx kenx migrate deploy"
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
