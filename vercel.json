@@ -6,13 +6,14 @@
     "builds": [
         {
 
-            "src": "src/app.ts",
+            "src": "src/server.ts",
             "use": "@vercel/node"
         }
     ],
     "routes" : [
-        { "src": "/routes/BooksSearch.tsx", 
-        "dest": "/routes/BooksSearch.tsx" }
-
+        {
+            "src": "/(.*)",
+            "dest": "src/server.ts"
+        }
     ]
 }
