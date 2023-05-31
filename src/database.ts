@@ -2,10 +2,9 @@ import { knex as setupKnex, Knex } from 'knex'
 import { env } from './env'
 
 export const config: Knex.Config = {
-  client: 'sqlite3',
-  connection: {
-    filename: env.DATABASE_URL,
-  },
+  client: 'pg',
+  connection: env.PG_CONNECTION_STRING,
+  searchPath: ['knex', 'public'],
 
   migrations: {
     extension: 'ts',

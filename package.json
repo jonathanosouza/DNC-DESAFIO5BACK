@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node" : "16.x" 
+    "node": "16.x"
   },
   "scripts": {
     "start": "node src/server.ts",
@@ -30,6 +30,7 @@
     "fastify-cors": "^6.1.0",
     "install": "^0.13.0",
     "knex": "^2.4.2",
+    "pg": "^8.11.0",
     "sqlite3": "^5.1.6",
     "zod": "^3.21.4"
   },
