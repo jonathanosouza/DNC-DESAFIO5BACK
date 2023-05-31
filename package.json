@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node src/server.ts",
@@ -13,7 +13,7 @@
     "dev": "tsx watch src/server.ts",
     "knex": "node --trace-warnings --loader tsx ./node_modules/knex/bin/cli.js",
     "lint": "eslint src --ext .ts --fix",
-    "vercel-build" : "npx knex migrate deploy"
+    "vercel-build" : "npx knex migrate:lastest"
   }, 
   "keywords": [],
   "author": "",
