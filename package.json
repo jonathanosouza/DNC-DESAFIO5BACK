@@ -5,14 +5,15 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
     "knex": "node --trace-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +23,8 @@
     "@fastify/cookie": "^8.3.0",
     "@fastify/cors": "7.0.0",
     "@types/supertest": "^2.0.12",
-    "cors": "^2.8.5",
     "D": "^1.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "fastify": "3.15.0",
     "fastify-cors": "^6.1.0",
@@ -31,6 +32,7 @@
     "knex": "^2.4.2",
     "pg": "^8.11.0",
     "sqlite3": "^5.1.6",
+    "tsup": "^6.7.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
