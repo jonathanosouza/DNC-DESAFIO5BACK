@@ -6,7 +6,7 @@ const envSchema = z.object({
     .enum(['development', 'teste', 'production'])
     .default('production'),
     PG_CONNECTION_STRING: z.string(),
-  PORT: z.number().default(3000),
+  PORT: z.coerce.number().default(3000),
 })
 
 const _env = envSchema.safeParse(process.env)
