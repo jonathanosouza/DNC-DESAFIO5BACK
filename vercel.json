@@ -6,14 +6,14 @@
     "builds": [
         {
 
-            "src": "src/server.ts",
+            "src": "build/server.js",
             "use": "@vercel/node"
         }
     ],
     "routes" : [
         {
             "src": "/(.*)",
-            "dest": "build/server.js"
+            "dest": "src/server.ts"
         }
     ]
 }
